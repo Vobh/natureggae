@@ -1,7 +1,7 @@
-import ContactButton from "@/app/components/ContactButton";
-import ProductList from "@/app/components/products/ProductList";
 import Image from "next/image";
 
+import ProductList from "@/app/components/products/ProductList";
+import ContactButton from "@/app/components/ContactButton";
 const VendorDetailPage = () => {
     return (
         <main className="mt-4 max-w-[1500px] mx-auto px-6 pb-6">
