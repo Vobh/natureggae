@@ -24,6 +24,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const content = (
+      <p>Yo yo</p>
+    )
+
   return (
     <html lang="en">
       <body
