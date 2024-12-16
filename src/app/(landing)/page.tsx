@@ -304,7 +304,7 @@ const Page = () => {
 
               <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
                           PingPanda has been a game-changer for me. I'been using it for two
-                          months now and seeing sales pop up in real-time is super satisfying. 
+                          months now and seeing sales pop up in real-time is super satisfying. ♥♥
               </p>
 
               <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center sm:items-start gap-4 mt-2">
@@ -336,7 +336,7 @@ const Page = () => {
 
               <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
                   PingPanda's been paying off for our SaaS. Nice to have a simple way to 
-                  see  how we're doing day-to-day.
+                  see  how we're doing day-to-day.😎😎
                   Definitely make our lives easier. 
               </p>
 
