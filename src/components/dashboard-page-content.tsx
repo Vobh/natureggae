@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Button, buttonVariants } from "./ui/button";
 import { useState } from "react";
 import { Modal } from "./ui/modal";
+import { DashboardEmptyState } from "@/app/dashboard/dashboard-empty-state";
 
 export const DashboardPageContent = () => {
     const [deletingCategory, setDeletingCategory] = useState<string | null>(null)
@@ -44,7 +45,7 @@ export const DashboardPageContent = () => {
     }
 
     if(!categories || categories.length === 0) {
-        return <div>empty state</div>
+        return <DashboardEmptyState />
     }
 
     return (
