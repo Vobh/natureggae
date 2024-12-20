@@ -57,7 +57,7 @@ interface CreateEventCategoryModal extends PropsWithChildren {
 export const CreateEventCategoryModal = ({ 
     children,
     containerClassName,
-}: PropsWithChildren) => {
+}: CreateEventCategoryModal) => {
     const [isOpen, setIsOpen] = useState(false)
     const queryClient = useQueryClient()
 
@@ -88,9 +88,10 @@ export const CreateEventCategoryModal = ({
     }
 
     return (
-        <div className={containerClassName} onClick={() => setIsOpen(true)}>
-            {children}
-
+        <>
+            <div className={containerClassName} onClick={() => setIsOpen(true)}>
+                {children}
+            </div>
             <Modal className="max-w-xl p-8" showModal={isOpen} setShowModal={setIsOpen}>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div>
@@ -178,7 +179,7 @@ export const CreateEventCategoryModal = ({
                         </Button>
                     </div>
                 </form>
-            </Modal>
-        </div>
+            </Modal>            
+        </> 
     )
 } 
