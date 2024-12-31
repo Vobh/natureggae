@@ -1,5 +1,3 @@
-"use client";
-
 import { Card } from "@/components/ui/card"
 import { client } from "@/lib/client"
 import { useQuery } from "@tanstack/react-query"
@@ -15,7 +13,7 @@ export const EmptyCategoryState = ({
 }) => {
     const router = useRouter()
 
-    const {data} = useQuery({
+    const { data } = useQuery({
         queryKey: ["category", categoryName, "hasEvents"],
         queryFn: async () => {
             const res = await client.category.pollCategory.$get({
@@ -43,19 +41,18 @@ export const EmptyCategoryState = ({
         body: JSON.stringify({
             category: '${categoryName}',
             fields: {
-            field1: 'value1', // for example: user id
-            field2: 'value2' // for example: user email
-            }
-        })
+                    field1: 'value1', // for example: user id
+                    field2: 'value2' // for example: user email
+                }
+            })
         })`
 
     return (
         <Card 
-            contentClassName="max-w-2xl w-full flex-col items-center p-6" 
+            contentClassName="max-w-2xl w-full flex flex-col items-center p-6" 
             className="flex-1 flex items-center justify-center"
         >
-            <h2 className="text-xl/8 font-medium text-center tracking-tight
-            text-gray-950">
+            <h2 className="text-xl/8 font-medium text-center tracking-tight text-gray-950">
                 Create your first {categoryName} event
             </h2>
             <p className="text-sm/6 text-gray-600 mb-8 max-w-md text-center text-pretty">
@@ -64,7 +61,7 @@ export const EmptyCategoryState = ({
 
             <div className="w-full max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="bg-gray-800 px-4 py-2 flex justify-between items-center">
-                    <div className="flex space-y-2">
+                    <div className="flex space-x-2">
                         <div className="size-3 rounded-full bg-red-500" />
                         <div className="size-3 rounded-full bg-yellow-500" />
                         <div className="size-3 rounded-full bg-green-500" />

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { buttonVariants } from "@/components/ui/button"
 import { Modal } from "@/components/ui/modal"

@@ -17,7 +17,8 @@ const REQUEST_VALIDATOR = z
     .strict()
 
 export const Post = async (req: NextRequest) => {
-    const authHeader = req.headers.get("Authorization")
+    try {
+        const authHeader = req.headers.get("Authorization")
 
     if(!authHeader) {
         return NextResponse.json({message: "Unauthorized"}, { status: 401 })
@@ -174,4 +175,13 @@ export const Post = async (req: NextRequest) => {
         message: "Event processed successfully",
         eventId: event.id,
     })
+    } catch (err) {
+        console.error("err")
+
+        if (err instanceof z.ZodError) {
+            return NextResponse.json({ message: err.message }, { status: 422 })
+        }
+
+        return NextResponse.json({message: "Internal server error"}, { status: 500 })
+    }
 } 
