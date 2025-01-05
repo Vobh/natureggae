@@ -11,6 +11,11 @@ export const paymentRouter = router({
             userId: user.id,
         })
 
-        return c.json({ url: session.url })
+    return c.json({ url: session.url })
     }),
+
+    getUserPlan: privateProcedure.query(async ({c, ctx}) => {
+        const {user} = ctx
+        return c.json({ plan: user.plan })
+    })
 })
